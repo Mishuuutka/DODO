@@ -32,7 +32,7 @@ const ModalUnsetState = ({toggleIsOpen, people, checkUpdatePeoples}) => {
                 <p className='p-name'>{people.price !== 0 ? people.price  : '<Пусто>'}</p>
 
                 <span>Комментарий</span>
-                <p className='p-name'>{people.comment !== '' ? people.comment : '<Пусто>'}</p>
+                <p className='p-name p-commnet'>{people.comment !== '' ? people.comment : '<Пусто>'}</p>
 
                 <div className='width-container'>
                     <div className='flex-container'>

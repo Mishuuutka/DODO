@@ -36,7 +36,7 @@ const ModalPeople = ({people, toggleIsOpen, checkUpdatePeoples}) => {
         <div onClick={toggleIsOpen(this)} className="modal">
             <div className="create-modal create-people">
                 <img onClick={toggleIsOpen(this)} className="close-modal" src={close} alt="close" />
-                <p className='title-create'>Изменить данные</p>
+                <p className='title-create'>Информация</p>
 
                 <span>ФИО</span>
                 <input id='input-name-people' className="inputs-modal" type="text"  value={peopleName} onChange={e => changeName(e.target.value)}/>

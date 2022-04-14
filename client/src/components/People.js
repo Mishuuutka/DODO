@@ -61,8 +61,7 @@ const People = ({people, checkUpdatePeoples}) => {
         <div className={people.active ? 'active-people block-people' : 'block-people' } onClick={toggleState}>
             <div className="flex-container">
                 <img onClick={toggleIsOpenSetting} className='menu-people' src={dots} alt="menu"/>
-                <p className="name-people">{people.peoplename}</p>
-                <p className="emodji-people">{people.emodji}</p>
+                <p className="name-people">{people.peoplename} <span className="emodji-people">{people.emodji}</span></p>
             </div>
             <p className="price-people">{people.active && people.price !== '0' ? `${people.price} ₽` : ''}</p>
         </div>

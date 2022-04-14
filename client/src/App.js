@@ -6,10 +6,8 @@ import Login from './components/Login';
 
   function App() {
   const [peoples, setPeoples] = useState([]);
-  const [auth, setAuth] = useState(
-    JSON.parse(localStorage.getItem('user'))?.status === true ?
-    JSON.parse(localStorage.getItem('user')) :
-    {status: false});
+  const user = JSON.parse(localStorage.getItem('user'))
+  const [auth, setAuth] = useState(user?.status === true ? user : {status: false});
 
 
   const checkUpdatePeoples = async () => {
@@ -20,8 +18,10 @@ import Login from './components/Login';
   }
 
   useEffect(() => {
-    checkUpdatePeoples();
-  }, [])
+    if (auth.status) {
+      checkUpdatePeoples();
+    }
+  }, [auth])
 
   return (
     <div className="App">
@@ -30,7 +30,7 @@ import Login from './components/Login';
       }
       {auth.status &&
       <>
-        <Header checkUpdatePeoples={checkUpdatePeoples} />
+        <Header checkUpdatePeoples={checkUpdatePeoples} setAuth={setAuth}/>
         <ListPeople peoples={peoples} checkUpdatePeoples={checkUpdatePeoples} />
       </>
       }

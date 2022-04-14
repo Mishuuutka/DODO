@@ -18,6 +18,7 @@ body {
     border-radius: 10px;
     padding: 0 15px;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .block-people:hover {
@@ -31,12 +32,20 @@ body {
 .name-people {
     font-weight: 600;
     color: black;
-    max-width: 150px;
+    margin: 0;
 }
 
 .price-people {
+    white-space: nowrap;
     font-weight: 600;
     color: black;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.menu-people {
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 .flex-container {
@@ -46,8 +55,35 @@ body {
 }
 
 .header {
-    text-align: end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .button-delete {
+    background: none;
+    color: black;
+    font-size: 16px;
+    min-width: 50px;
+    padding: 10px;
+    border: 1px solid;
+    margin-left: 15px;
+}
+
+.header .button-delete:hover {
+    background: black;
+    color: white;
+}
+
+.p-commnet {
+    word-break: break-all;
 }
 
 .header-button {
@@ -58,11 +94,20 @@ body {
     color: white;
     font-size: 16px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .button-create {
     background: #37B34A;
     margin-right: 20px;
+}
+
+.button-create:hover {
+    background: #21702d;
+}
+
+.toggle-sort-block label {
+    cursor: pointer;
 }
 
 .button-delete {
@@ -73,10 +118,21 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 15px;
     width: 100%;
     box-sizing: border-box;
     flex-wrap: wrap;
+}
+
+.general-block {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.p-general {
+    font-weight: 600;
+    font-size: 26px;
+    margin: 0 0 10px 15px;
 }
 
 .active-people {
@@ -110,6 +166,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 10;
 }
 
 .create-modal {
@@ -121,12 +178,14 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    z-index: 10;
 }
 
 .close-modal {
     position: absolute;
     top: 20px;
-    right: 20px
+    right: 20px;
+    cursor: pointer;
 }
 
 .title-create {
@@ -183,10 +242,83 @@ body {
     margin: 0 0 15px 0;
     font-size: 24px;
     color: #FF6900;
+    max-width: 300px;
 }
 
 .width-container {
     width: 100%;
+}
+
+.sort-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.p-sort {
+    margin: 0 15px;
+}
+
+.login-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6900;
+    margin: 10px 0;
+}
+
+.p-active {
+    display: block;
+    width: 100%;
+    height: 10px;
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 24px;
+}
+
+.header .button-create {
+    margin-right: 15px !important;
+}
+
+.input-login {
+    border: 1px solid rgba(0, 0, 0, 0.475);
+    border-radius: 10px;
+    height: 25px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#login-button {
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    height: 35px;
+    width: 80px;
+    background: #FF6900;
+    color: white;
+    cursor: pointer;
+}
+
+.refresh-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #FF6900;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.refresh-button:hover {
+    background: #b24b02;
+}
+
+#login-button:hover {
+    background: #b24b02;
+}
+
+#password {
+    -webkit-text-security: disc;
+    text-security: disc;
 }
 
 @media (max-width: 600px) {
@@ -200,3 +332,68 @@ body {
         width: 33%;
     }
 }
+
+
+/* Переключатель IOS */
+
+input[type="checkbox"].ios8-switch {
+    position: absolute;
+    margin: 8px 0 0 16px;
+}
+
+input[type="checkbox"].ios8-switch+label {
+    position: relative;
+    padding: 5px 0 0 50px;
+    line-height: 2.0em;
+}
+
+input[type="checkbox"].ios8-switch+label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 40px;
+    /* x*5 */
+    height: 24px;
+    /* x*3 */
+    border-radius: 16px;
+    /* x*2 */
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input[type="checkbox"].ios8-switch+label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 24px;
+    /* x*3 */
+    height: 24px;
+    /* x*3 */
+    border-radius: 16px;
+    /* x*2 */
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input[type="checkbox"].ios8-switch+label:hover:after {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="checkbox"].ios8-switch:checked+label:after {
+    margin-left: 16px;
+}
+
+input[type="checkbox"].ios8-switch:checked+label:before {
+    background: #55D069;
+}
+
+
+/* END Переключатель IOS */

@@ -22,11 +22,11 @@ const Login = ({setAuth}) => {
         <div className="login-block">
             <div className="block-form">
                 <form>
-                    <p>Логин</p>
-                    <input type="text" id="username" />
+                    <p className="login-text">Логин</p>
+                    <input type="text" id="username" className="input-login"/>
 
-                    <p>Пароль</p>
-                    <input type="text" id="password" />
+                    <p className="login-text">Пароль</p>
+                    <input type="text" id="password" className="input-login"/>
 
                     <button onClick={loginHandle} id="login-button">Войти</button>
                 </form>
