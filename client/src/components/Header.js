@@ -21,7 +21,7 @@ const Header = ({checkUpdatePeoples, setAuth}) => {
         <div className="header">
             <button className="header-button button-delete" onClick={logout}>Выйти</button>
             <div className="header-container">
-                <button className="refresh-button" onClick={checkUpdatePeoples}><img src={refresh} alt="refresh" /></button>
+                <button className="refresh-button" onClick={checkUpdatePeoples}><img src={refresh} alt="refresh" width='24' height='24' /></button>
                 <button onClick={toggleIsOpen} className="header-button button-create">Создать</button>
             </div>
             {isOpen && <ModalCreate toggleIsOpen={(event) => toggleIsOpen} checkUpdatePeoples={checkUpdatePeoples} />}

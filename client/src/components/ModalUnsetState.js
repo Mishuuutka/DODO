@@ -23,7 +23,7 @@ const ModalUnsetState = ({toggleIsOpen, people, checkUpdatePeoples}) => {
         <div onClick={toggleIsOpen(this)} className="modal">
             <div className="create-modal">
                 <img onClick={toggleIsOpen(this)} className="close-modal" src={close} alt="close" />
-                <p className='title-create'>Сбрость задолжность</p>
+                <p className='title-create'>Сбросить задолжность</p>
 
                 <span>ФИО</span>
                 <p className='p-name'>{people.peoplename} {people.emodji}</p>
