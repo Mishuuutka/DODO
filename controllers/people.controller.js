@@ -7,16 +7,20 @@ class PeopleController {
             peoplephone,
             emodji,
             price,
+            price_two,
             active,
-            comment
+            comment,
+            doubleprice,
         } = req.body
-        const newPerson = await db.query('INSERT INTO people (peoplename, peoplephone, emodji, price, active, comment) values ($1, $2, $3, $4, $5, $6) RETURNING *', [
+        const newPerson = await db.query('INSERT INTO people (peoplename, peoplephone, emodji, price, active, comment, price_two, doubleprice) values ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *', [
             peoplename,
             peoplephone,
             emodji,
             price,
             active,
-            comment
+            comment,
+            price_two,
+            doubleprice,
         ])
 
         res.json(newPerson.rows[0])
@@ -41,17 +45,21 @@ class PeopleController {
             peoplephone,
             emodji,
             price,
+            price_two,
             active,
             comment,
+            doubleprice,
             id,
         } = req.body
-        const people = await db.query('UPDATE people SET peoplename = $1, peoplephone = $2, emodji = $3, price = $4, active = $5, comment = $6 WHERE id = $7 RETURNING *', [
+        const people = await db.query('UPDATE people SET peoplename = $1, peoplephone = $2, emodji = $3, price = $4, active = $5, comment = $6, price_two = $7, doubleprice = $8 WHERE id = $9 RETURNING *', [
             peoplename,
             peoplephone,
             emodji,
             price,
             active,
             comment,
+            price_two,
+            doubleprice,
             id,
         ])
 

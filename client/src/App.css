@@ -181,7 +181,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
@@ -337,6 +337,46 @@ body {
 #password {
     -webkit-text-security: disc;
     text-security: disc;
+}
+
+.label-double-price {
+    color: white;
+}
+
+.container-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.keyboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.keyboard-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyboard-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.keyboard-active-money {
+    background: #37B34A;
 }
 
 @media (max-width: 600px) {

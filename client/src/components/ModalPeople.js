@@ -9,7 +9,9 @@ const ModalPeople = ({people, toggleIsOpen, checkUpdatePeoples}) => {
             peoplephone: document.querySelector('#input-phone-people').value,
             emodji: document.querySelector('#input-emodji-people').value,
             price: document.querySelector('#input-price-people')?.value || 0,
+            price_two: document.querySelector('#input-price-two-people')?.value || 0,
             comment: document.querySelector('#input-comment-people')?.value || '',
+            doubleprice: people.doubleprice,
             active: people.active,
         });
 
@@ -31,6 +33,7 @@ const ModalPeople = ({people, toggleIsOpen, checkUpdatePeoples}) => {
     const [peopleEmodji, changeEmodji] = useState(people.emodji)
     const [peoplePrice, changePrice] = useState(people.price)
     const [peopleComment, changeComment] = useState(people.comment)
+    const [peoplePriceTwo, changePriceTwo] = useState(people.price_two)
 
     return (
         <div onClick={toggleIsOpen(this)} className="modal">
@@ -51,6 +54,13 @@ const ModalPeople = ({people, toggleIsOpen, checkUpdatePeoples}) => {
                     <>
                         <span>Цена</span>
                         <input id='input-price-people' className="inputs-modal" type="text" value={peoplePrice} onChange={e => changePrice(e.target.value)}/>
+
+                        {people.doubleprice && 
+                            <>
+                                <span>Цена №2</span>
+                                <input id='input-price-two-people' className="inputs-modal" type="text" value={peoplePriceTwo} onChange={e => changePriceTwo(e.target.value)}/> 
+                            </>
+                        }
 
                         <span>Комментарий</span>
                         <textarea id='input-comment-people' className="inputs-modal" value={peopleComment} onChange={e => changeComment(e.target.value)}/>

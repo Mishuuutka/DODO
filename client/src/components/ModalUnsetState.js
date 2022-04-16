@@ -9,7 +9,9 @@ const ModalUnsetState = ({toggleIsOpen, people, checkUpdatePeoples}) => {
                 peoplephone: people.peoplephone,
                 emodji: people.emodji,
                 price: document.querySelector('#input-price-people')?.value || 0,
+                price_two: document.querySelector('#input-price-people')?.value || 0,
                 comment: document.querySelector('#input-comment-people')?.value || '',
+                doubleprice: false,
                 active: false,
             });
     
@@ -29,7 +31,14 @@ const ModalUnsetState = ({toggleIsOpen, people, checkUpdatePeoples}) => {
                 <p className='p-name'>{people.peoplename} {people.emodji}</p>
 
                 <span>Цена</span>
-                <p className='p-name'>{people.price !== 0 ? people.price  : '<Пусто>'}</p>
+                <p className='p-name'>{people.price !== '0' ? people.price  : '<Пусто>'}</p>
+
+                {people.doubleprice &&
+                    <>
+                        <span>Цена №2</span>
+                        <p className='p-name'>{people.price_two !== '0' ? people.price_two  : '<Пусто>'}</p>
+                    </>
+                }
 
                 <span>Комментарий</span>
                 <p className='p-name p-commnet'>{people.comment !== '' ? people.comment : '<Пусто>'}</p>

@@ -63,7 +63,10 @@ const People = ({people, checkUpdatePeoples}) => {
                 <img onClick={toggleIsOpenSetting} className='menu-people' src={dots} alt="menu"/>
                 <p className="name-people">{people.peoplename} <span className="emodji-people">{people.emodji}</span></p>
             </div>
-            <p className="price-people">{people.active && people.price !== '0' ? `${people.price} ₽` : ''}</p>
+            <div>
+                <p className="price-people">{people.active && people.price !== '0' ? `${people.price} ₽` : ''}</p>
+                <p className="price-people">{people.active && people.price_two !== '0' ? `${people.price_two} ₽` : ''}</p>
+            </div>
         </div>
         {isOpenSetting && <ModalPeople
         toggleIsOpen={(event) => toggleIsOpenSetting}

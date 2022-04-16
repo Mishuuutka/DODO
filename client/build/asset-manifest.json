@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.6d7e4f78.css",
-    "main.js": "/static/js/main.6b3cdd97.js",
+    "main.css": "/static/css/main.b16dfbaa.css",
+    "main.js": "/static/js/main.ed96cfb7.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/OpenSans-Medium.ttf": "/static/media/OpenSans-Medium.f0cdede053a22b990af8.ttf",
     "static/media/OpenSans-Regular.ttf": "/static/media/OpenSans-Regular.d7d7b8359eeb9cddfba6.ttf",
     "static/media/OpenSans-Bold.ttf": "/static/media/OpenSans-Bold.6e27168fc8a5a200a026.ttf",
     "index.html": "/index.html",
-    "main.6d7e4f78.css.map": "/static/css/main.6d7e4f78.css.map",
-    "main.6b3cdd97.js.map": "/static/js/main.6b3cdd97.js.map",
+    "main.b16dfbaa.css.map": "/static/css/main.b16dfbaa.css.map",
+    "main.ed96cfb7.js.map": "/static/js/main.ed96cfb7.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d7e4f78.css",
-    "static/js/main.6b3cdd97.js"
+    "static/css/main.b16dfbaa.css",
+    "static/js/main.ed96cfb7.js"
   ]
 }
